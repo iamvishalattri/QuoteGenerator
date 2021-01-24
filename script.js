@@ -41,7 +41,8 @@ async function getQuote() {
     quoteText.innerText = data.quoteText;
     hideLoadingSpinner();
   } catch (error) {
-    getQuote();
+    quoteText.innerText = "Two things are infinite: the universe and human stupidity and I'm not sure about the universe.";
+    authorText.innerText = "Albert Einstein";
   }
 }
 
