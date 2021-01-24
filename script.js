@@ -12,7 +12,7 @@ function showLoadingSpinner() {
 
 function hideLoadingSpinner() {
   if (!loader.hidden) {
-    quoteContainer.hidden = true;
+    quoteContainer.hidden = false;
     loader.hidden = true;
   }
 }
