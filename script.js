@@ -20,7 +20,7 @@ function hideLoadingSpinner() {
 // Get Quote From API
 async function getQuote() {
   showLoadingSpinner();
-  const proxyUrl = "http://www.whateverorigin.org/get?url=";
+  const proxyUrl = "http://cors-anywhere.herokuapp.com";
   const apiUrl =
     "http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json";
   try {
@@ -41,8 +41,10 @@ async function getQuote() {
     quoteText.innerText = data.quoteText;
     hideLoadingSpinner();
   } catch (error) {
-    quoteText.innerText = "Two things are infinite: the universe and human stupidity and I'm not sure about the universe.";
+    quoteText.innerText =
+      "Two things are infinite: the universe and human stupidity and I'm not sure about the universe.";
     authorText.innerText = "Albert Einstein";
+    hideLoadingSpinner();
   }
 }
 
